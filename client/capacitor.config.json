@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "x-collection",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

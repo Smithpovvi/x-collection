@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+  <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm()" class="screen-container auth-container">
+        <div class="auth-container__social-block">
+          <app-icon-card-button icon="google-g" color="light" disableShadow="true" (click)="loginWithGoogle()"></app-icon-card-button>
+          <app-icon-card-button icon="facebook-f" color="light" disableShadow="true" (click)="loginWithFacebook()"></app-icon-card-button>
+        </div>
+
+        <div  class="auth-container__login-form-block">
+
+            <app-text-input formControlName="loginOrEmail" label="Email or login"
+                            placeholder="Enter email or login"
+                            [error]="getFormErrorMessage(loginOrEmail)"></app-text-input>
+            <app-text-input formControlName="password" label="Password" placeholder="Enter password"
+                            linkText="Do you forgot?"
+                            linkTextColor="primary" [error]="getFormErrorMessage(password)"></app-text-input>
+            <app-common-checkbox label="Remember me" color="primary"></app-common-checkbox>
+            <app-submit-button [disabled]="loginForm.invalid" color="secondary">Login</app-submit-button>
+
+            <div class="auth-container__register-text">
+              <ion-text>Do you haven’t a account ?</ion-text>
+              <ion-text class="auth-container__register-text__secondary-text link-text" color="primary">You can
+                register!
+              </ion-text>
+            </div>
+
+        </div>
+  </form>
+</ion-content>

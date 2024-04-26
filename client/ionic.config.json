@@ -1,0 +1,8 @@
+{
+  "name": "x-collection",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "a604cd9a"
+}

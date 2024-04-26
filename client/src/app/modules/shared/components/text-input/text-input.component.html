@@ -1,0 +1,15 @@
+<div class="field-body">
+  <div class="field-body__top-text-bar" *ngIf="linkText?.length || label?.length">
+    <ion-text *ngIf="label?.length">{{label}}</ion-text>
+    <ion-text class="link-text" [color]="linkTextColor" *ngIf="linkText?.length">{{linkText}}</ion-text>
+  </div>
+
+  <div class="field-body__input-block">
+    <div [ngClass]="{'field-body__input-block__danger': error?.length}">
+      <ion-item class="field-body__input-block__input-body" lines="none" color="tertiary">
+        <ion-input [placeholder]="placeholder" [formControlName]="formControlName"></ion-input>
+      </ion-item>
+    </div>
+    <ion-text color="danger">{{error}}</ion-text>
+  </div>
+</div>

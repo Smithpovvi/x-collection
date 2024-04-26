@@ -1,0 +1,21 @@
+.checkbox-body {
+  width: fit-content;
+  border-radius: 8px;
+  --min-height: auto;
+  --border-width: 0px;
+  --padding-start: 0px;
+
+  ion-label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0;
+  }
+
+  ion-checkbox{
+    margin: 0;
+    margin-inline-end: 15px;
+    --background: var(--ion-color-light);
+    --border-color: var(--ion-color-light);
+  }
+}

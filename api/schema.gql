@@ -1,0 +1,82 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Season {
+  seasonName: String!
+  startDate: String!
+  endDate: String!
+  id: Int!
+}
+
+type User {
+  id: Int!
+  email: String!
+  login: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  googleUserId: String!
+  facebookUserId: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type LoginUserOutput {
+  token: String!
+}
+
+type StatusCodeOutput {
+  statusCode: Int!
+}
+
+type Query {
+  getUsersList: [User!]!
+  getSeasons: [Season!]!
+}
+
+type Mutation {
+  createUser(createUserArgs: CreateUserInput!): StatusCodeOutput!
+  loginUser(loginUserArgs: LoginUserInput!): LoginUserOutput!
+  activationUser(activationUserArgs: ActivationUserInput!): StatusCodeOutput!
+  googleSignIn(googleSignInArgs: GoogleSignInInput!): LoginUserOutput!
+  facebookSignIn(facebookSignInArgs: FacebookSignInInput!): LoginUserOutput!
+  createSeason(createSeasonArgs: CreateSeasonInput!): Season!
+  deleteSeason(deleteSeasonArgs: DeleteSeasonInput!): StatusCodeOutput!
+}
+
+input CreateUserInput {
+  email: String!
+  password: String!
+  login: String!
+}
+
+input LoginUserInput {
+  login: String!
+  password: String!
+}
+
+input ActivationUserInput {
+  login: String!
+  code: String!
+}
+
+input GoogleSignInInput {
+  idToken: String!
+}
+
+input FacebookSignInInput {
+  accessToken: String!
+}
+
+input CreateSeasonInput {
+  seasonName: String!
+  startDate: String!
+  endDate: String!
+}
+
+input DeleteSeasonInput {
+  id: Float!
+}

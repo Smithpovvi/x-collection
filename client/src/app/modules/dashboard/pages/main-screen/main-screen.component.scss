@@ -1,0 +1,60 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 30px;
+
+  &__user-block {
+    display: flex;
+    grid-gap: 13px;
+
+    &__logo {
+      width: 136px;
+      height: 128px;
+    }
+
+    &__control-panel {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 13px;
+      padding: 0;
+
+      app-content-card {
+        display: block;
+        height: 55px;
+
+        ion-text {
+          font-size: 22px;
+          font-weight: 600;
+        }
+      }
+
+      &__controls {
+        display: flex;
+        justify-content: space-between;
+        grid-gap: 13px;
+
+        app-icon-card-button {
+          width: 61px;
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  &__bottom-buttons-block {
+    display: flex;
+    flex-wrap: nowrap;
+    grid-gap: 13px;
+
+    app-icon-card-button {
+      width: 80px;
+      height: 80px;
+    }
+
+    app-submit-button {
+      width: 266px;
+      height: 80px;
+    }
+  }
+}
+

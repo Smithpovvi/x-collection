@@ -1,0 +1,19 @@
+<ion-content [fullscreen]="true">
+  <div class="screen-container settings-container">
+    <div class="settings-container__cards-block">
+      <app-toggle-card (change)="switchDarkMode($event)" [checked]="isDarkMode | async">
+        <ion-text color="medium">Dark mode</ion-text>
+      </app-toggle-card>
+      <app-toggle-card>
+        <ion-text color="medium">Google connect</ion-text>
+      </app-toggle-card>
+      <app-toggle-card>
+        <ion-text color="medium">Facebook connect</ion-text>
+      </app-toggle-card>
+      <app-toggle-card>
+        <ion-text color="medium">Push-notifications</ion-text>
+      </app-toggle-card>
+    </div>
+    <app-submit-button color="secondary" (click)="acceptChanges()">Accept</app-submit-button>
+  </div>
+</ion-content>

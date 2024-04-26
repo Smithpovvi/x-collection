@@ -1,0 +1,22 @@
+<ion-content [fullscreen]="true">
+  <div class="screen-container dashboard-container">
+    <div class="dashboard-container__user-block">
+      <app-content-card class="dashboard-container__user-block__logo" isLogo="true"></app-content-card>
+      <div class="dashboard-container__user-block__control-panel">
+        <app-content-card>
+          <ion-text color="medium">User test name</ion-text>
+        </app-content-card>
+        <div class="dashboard-container__user-block__control-panel__controls">
+          <app-icon-card-button icon="pencil" iconSize="medium" disabled="true"></app-icon-card-button>
+          <app-icon-card-button icon="notification-bell" iconSize="medium" disabled="true"></app-icon-card-button>
+          <app-icon-card-button icon="out" iconSize="medium" (click)="logout()"></app-icon-card-button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dashboard-container__bottom-buttons-block">
+      <app-icon-card-button icon="gear" iconSize="large" (click)="goToSettings()"></app-icon-card-button>
+      <app-submit-button disabled="true" color="secondary">My collection</app-submit-button>
+    </div>
+  </div>
+</ion-content>

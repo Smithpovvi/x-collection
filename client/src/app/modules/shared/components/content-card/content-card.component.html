@@ -1,0 +1,10 @@
+<ion-card [color]="color" class="card-body">
+  <ng-container *ngIf="!isLogo; else logoContainer">
+    <ion-card-content>
+      <ng-content></ng-content>
+    </ion-card-content>
+  </ng-container>
+  <ng-template #logoContainer>
+    <ion-icon icon="user" size="large"></ion-icon>
+  </ng-template>
+</ion-card>

@@ -1,0 +1,15 @@
+.card-body {
+  margin: 0;
+  border-radius: 16px;
+
+  ion-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px 5px 20px;
+  }
+
+  ion-toggle {
+    pointer-events: none;
+  }
+}
